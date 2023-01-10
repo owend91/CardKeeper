@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CardKeeperApp: App {
+    let moc = CardsContainer().persistentContainer.viewContext
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppTabView()
+                .environment(\.managedObjectContext, moc)
         }
     }
 }

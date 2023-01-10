@@ -11,6 +11,21 @@
 		631DA87B296C71E3001E5A98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA87A296C71E3001E5A98 /* ContentView.swift */; };
 		631DA87D296C71E4001E5A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631DA87C296C71E4001E5A98 /* Assets.xcassets */; };
 		631DA881296C71E4001E5A98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631DA880296C71E4001E5A98 /* Preview Assets.xcassets */; };
+		631DA889296C77BA001E5A98 /* CardModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 631DA887296C77BA001E5A98 /* CardModel.xcdatamodeld */; };
+		631DA88B296C7A07001E5A98 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA88A296C7A06001E5A98 /* AppTabView.swift */; };
+		631DA88D296C7AD1001E5A98 /* CardYearListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA88C296C7AD1001E5A98 /* CardYearListView.swift */; };
+		631DA890296C7C38001E5A98 /* Year+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA88F296C7C38001E5A98 /* Year+Extension.swift */; };
+		631DA892296C7DAF001E5A98 /* CardsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA891296C7DAF001E5A98 /* CardsContainer.swift */; };
+		631DA894296C7FD8001E5A98 /* CardCategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA893296C7FD8001E5A98 /* CardCategoryListView.swift */; };
+		631DA896296C810B001E5A98 /* Category+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA895296C810B001E5A98 /* Category+Extension.swift */; };
+		631DA898296C854B001E5A98 /* FamilyAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA897296C854B001E5A98 /* FamilyAddressView.swift */; };
+		631DA89A296C867D001E5A98 /* Family+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA899296C867D001E5A98 /* Family+Extension.swift */; };
+		631DA89C296C86C6001E5A98 /* FamilyFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA89B296C86C6001E5A98 /* FamilyFormView.swift */; };
+		631DA89E296C8FF0001E5A98 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA89D296C8FF0001E5A98 /* CardListView.swift */; };
+		631DA8A0296C9A46001E5A98 /* CardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA89F296C9A46001E5A98 /* CardFormView.swift */; };
+		631DA8A6296CB467001E5A98 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA8A5296CB467001E5A98 /* Camera.swift */; };
+		631DA8A9296CB7C3001E5A98 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA8A8296CB7C3001E5A98 /* FileManager+Extensions.swift */; };
+		631DA8AB296CBB1C001E5A98 /* Card+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA8AA296CBB1C001E5A98 /* Card+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +35,21 @@
 		631DA87C296C71E4001E5A98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		631DA87E296C71E4001E5A98 /* CardKeeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardKeeper.entitlements; sourceTree = "<group>"; };
 		631DA880296C71E4001E5A98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		631DA888296C77BA001E5A98 /* CardModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardModel.xcdatamodel; sourceTree = "<group>"; };
+		631DA88A296C7A06001E5A98 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		631DA88C296C7AD1001E5A98 /* CardYearListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardYearListView.swift; sourceTree = "<group>"; };
+		631DA88F296C7C38001E5A98 /* Year+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Year+Extension.swift"; sourceTree = "<group>"; };
+		631DA891296C7DAF001E5A98 /* CardsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsContainer.swift; sourceTree = "<group>"; };
+		631DA893296C7FD8001E5A98 /* CardCategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategoryListView.swift; sourceTree = "<group>"; };
+		631DA895296C810B001E5A98 /* Category+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+Extension.swift"; sourceTree = "<group>"; };
+		631DA897296C854B001E5A98 /* FamilyAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyAddressView.swift; sourceTree = "<group>"; };
+		631DA899296C867D001E5A98 /* Family+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Family+Extension.swift"; sourceTree = "<group>"; };
+		631DA89B296C86C6001E5A98 /* FamilyFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFormView.swift; sourceTree = "<group>"; };
+		631DA89D296C8FF0001E5A98 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		631DA89F296C9A46001E5A98 /* CardFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFormView.swift; sourceTree = "<group>"; };
+		631DA8A5296CB467001E5A98 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		631DA8A8296CB7C3001E5A98 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
+		631DA8AA296CBB1C001E5A98 /* Card+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +82,17 @@
 		631DA877296C71E3001E5A98 /* CardKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				631DA8A7296CB7A6001E5A98 /* Extentions */,
+				631DA8A4296CB3DE001E5A98 /* UIViewRepresentables */,
+				631DA8A3296CA0D3001E5A98 /* FamilyAddressViews */,
+				631DA8A1296CA0A7001E5A98 /* CardListViews */,
+				631DA88E296C7C1A001E5A98 /* CoreData */,
 				631DA878296C71E3001E5A98 /* CardKeeperApp.swift */,
 				631DA87A296C71E3001E5A98 /* ContentView.swift */,
 				631DA87C296C71E4001E5A98 /* Assets.xcassets */,
 				631DA87E296C71E4001E5A98 /* CardKeeper.entitlements */,
 				631DA87F296C71E4001E5A98 /* Preview Content */,
+				631DA88A296C7A06001E5A98 /* AppTabView.swift */,
 			);
 			path = CardKeeper;
 			sourceTree = "<group>";
@@ -67,6 +103,63 @@
 				631DA880296C71E4001E5A98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		631DA88E296C7C1A001E5A98 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				631DA887296C77BA001E5A98 /* CardModel.xcdatamodeld */,
+				631DA899296C867D001E5A98 /* Family+Extension.swift */,
+				631DA895296C810B001E5A98 /* Category+Extension.swift */,
+				631DA88F296C7C38001E5A98 /* Year+Extension.swift */,
+				631DA891296C7DAF001E5A98 /* CardsContainer.swift */,
+				631DA8AA296CBB1C001E5A98 /* Card+Extension.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		631DA8A1296CA0A7001E5A98 /* CardListViews */ = {
+			isa = PBXGroup;
+			children = (
+				631DA88C296C7AD1001E5A98 /* CardYearListView.swift */,
+				631DA893296C7FD8001E5A98 /* CardCategoryListView.swift */,
+				631DA8A2296CA0C4001E5A98 /* CardList */,
+			);
+			path = CardListViews;
+			sourceTree = "<group>";
+		};
+		631DA8A2296CA0C4001E5A98 /* CardList */ = {
+			isa = PBXGroup;
+			children = (
+				631DA89D296C8FF0001E5A98 /* CardListView.swift */,
+				631DA89F296C9A46001E5A98 /* CardFormView.swift */,
+			);
+			path = CardList;
+			sourceTree = "<group>";
+		};
+		631DA8A3296CA0D3001E5A98 /* FamilyAddressViews */ = {
+			isa = PBXGroup;
+			children = (
+				631DA897296C854B001E5A98 /* FamilyAddressView.swift */,
+				631DA89B296C86C6001E5A98 /* FamilyFormView.swift */,
+			);
+			path = FamilyAddressViews;
+			sourceTree = "<group>";
+		};
+		631DA8A4296CB3DE001E5A98 /* UIViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				631DA8A5296CB467001E5A98 /* Camera.swift */,
+			);
+			path = UIViewRepresentables;
+			sourceTree = "<group>";
+		};
+		631DA8A7296CB7A6001E5A98 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				631DA8A8296CB7C3001E5A98 /* FileManager+Extensions.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +232,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631DA890296C7C38001E5A98 /* Year+Extension.swift in Sources */,
+				631DA898296C854B001E5A98 /* FamilyAddressView.swift in Sources */,
 				631DA87B296C71E3001E5A98 /* ContentView.swift in Sources */,
+				631DA896296C810B001E5A98 /* Category+Extension.swift in Sources */,
+				631DA892296C7DAF001E5A98 /* CardsContainer.swift in Sources */,
+				631DA889296C77BA001E5A98 /* CardModel.xcdatamodeld in Sources */,
+				631DA894296C7FD8001E5A98 /* CardCategoryListView.swift in Sources */,
+				631DA88D296C7AD1001E5A98 /* CardYearListView.swift in Sources */,
+				631DA8A0296C9A46001E5A98 /* CardFormView.swift in Sources */,
+				631DA89C296C86C6001E5A98 /* FamilyFormView.swift in Sources */,
+				631DA8AB296CBB1C001E5A98 /* Card+Extension.swift in Sources */,
+				631DA88B296C7A07001E5A98 /* AppTabView.swift in Sources */,
+				631DA8A6296CB467001E5A98 /* Camera.swift in Sources */,
+				631DA89A296C867D001E5A98 /* Family+Extension.swift in Sources */,
+				631DA8A9296CB7C3001E5A98 /* FileManager+Extensions.swift in Sources */,
+				631DA89E296C8FF0001E5A98 /* CardListView.swift in Sources */,
 				631DA879296C71E3001E5A98 /* CardKeeperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +377,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to allow you to take pictures of your cards.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +416,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to allow you to take pictures of your cards.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -354,6 +464,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		631DA887296C77BA001E5A98 /* CardModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				631DA888296C77BA001E5A98 /* CardModel.xcdatamodel */,
+			);
+			currentVersion = 631DA888296C77BA001E5A98 /* CardModel.xcdatamodel */;
+			path = CardModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 631DA86D296C71E3001E5A98 /* Project object */;
 }
