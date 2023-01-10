@@ -17,6 +17,7 @@ struct CardListView: View {
     var category: Category
     var year: String
     @State private var addCard = false
+    @State private var selectedCard: Card?
     
     init(cardCategory: Category, year: String) {
         _cards = FetchRequest<Card>(sortDescriptors: [SortDescriptor(\.dateReceived, order: .reverse)], predicate: NSPredicate(format: "year == %@ AND category == %@", year, cardCategory.nameView))
@@ -26,21 +27,80 @@ struct CardListView: View {
     }
     
     var body: some View {
-
-        List(cards, id: \.self) { card in
-            VStack {
-                HStack {
-                    Spacer()
-                    Image(uiImage: card.frontImage)
+        VStack {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                    ForEach(cards) { card in
+                        VStack {
+                            Image(uiImage: card.frontImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 100, height: 100)
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                .shadow(color: .black.opacity(0.6),radius: 2, x: 2, y: 2 )
+                            if let family = card.family {
+                                Text("\(family.nameView)")
+                                    .font(.caption)
+                                    .minimumScaleFactor(0.75)
+                                    .lineLimit(1)
+                            } else {
+                                Text("\(card.cardDescriptionView)")
+                                    .font(.caption)
+                                    .minimumScaleFactor(0.75)
+                                    .lineLimit(1)
+                            }
+                        }
+                        .onTapGesture {
+                            selectedCard = card
+                        }
+                    }
+                }
+            }
+            .padding()
+            if let selectedCard {
+                VStack {
+                    Image(uiImage: selectedCard.frontImage)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 200, height: 200)
-                    Spacer()
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .shadow(color: .black.opacity(0.6),radius: 2, x: 2, y: 2 )
+                    NavigationLink {
+                        Text(selectedCard.cardDescriptionView)
+                    } label: {
+                        Label("More Details", systemImage: "info")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .padding()
+
                 }
-                Text(card.cardDescription!)
+            } else {
+                Spacer()
             }
-            
         }
+
+//        List {
+//            ForEach(cards, id: \.self) { card in
+//                    VStack {
+//                        HStack {
+//                            Spacer()
+//                            Image(uiImage: card.frontImage)
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 100, height: 100)
+//                            Spacer()
+//                        }
+//                        if let family = card.family {
+//                            Text(family.nameView)
+//                                .font(.caption)
+//                        } else {
+//                            Text(card.cardDescriptionView)
+//                                .font(.caption)
+//                        }
+//                    }
+//            }
+//            .onDelete(perform: removeCard)
+            
+//        }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
@@ -56,6 +116,13 @@ struct CardListView: View {
         }
         .navigationTitle("\(category.nameView) Cards")
     }
+    
+//    func removeCard(at offsets: IndexSet) {
+//        for index in offsets {
+//            let card = cards[index]
+//            moc.delete(card)
+//        }
+//    }
 }
 
 struct CardListView_Previews: PreviewProvider {

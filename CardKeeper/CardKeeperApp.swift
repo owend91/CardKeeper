@@ -14,6 +14,7 @@ struct CardKeeperApp: App {
         WindowGroup {
             AppTabView()
                 .environment(\.managedObjectContext, moc)
+                .environment(\.colorScheme, .light)
         }
     }
 }

@@ -22,6 +22,7 @@ struct CardCategoryListView: View {
 //                Text(category.nameView)
             }
         }
+        
         .navigationTitle("\(cardYear.yearView)")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -36,7 +37,7 @@ struct CardCategoryListView: View {
         .alert("Add category", isPresented: $addCategory) {
             TextField("Year", text: $category)
             Button {
-                if cardYear.categoryArray.filter({ $0.nameView == category }).count == 0 {
+                if cardYear.categoryArray.filter({ $0.nameView == category }).count == 0 && !category.isEmpty{
                     let newCategory = Category(context: moc)
                     newCategory.name = category
                     newCategory.year = cardYear

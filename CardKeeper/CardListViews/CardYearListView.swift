@@ -36,7 +36,7 @@ struct CardYearListView: View {
             .alert("Add year", isPresented: $addYear) {
                 TextField("Year", text: $year)
                 Button {
-                    if years.filter({ $0.yearView == year }).count == 0 {
+                    if years.filter({ $0.yearView == year }).count == 0 && !year.isEmpty {
                         let newYear = Year(context: moc)
                         newYear.year = year
                         try? moc.save()

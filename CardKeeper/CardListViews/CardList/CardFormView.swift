@@ -16,13 +16,15 @@ struct CardFormView: View {
     @State private var family: Family?
     @State private var frontImage: UIImage?
     @State private var takeFrontImage = false
+    @State private var backImage: UIImage?
+    @State private var takeBackImage = false
+    @State private var dateReceived = Date()
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)])
     private var familyOptions: FetchedResults<Family>
     
     init(year: String, category: String){
         self._year = State(initialValue: year)
-
         self._category = State(initialValue: category)
     }
     
@@ -31,31 +33,63 @@ struct CardFormView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Picker("Family", selection: $family) {
-                    ForEach(familyOptions) { familyOpt in
-                        Text(familyOpt.nameView)
+                Section("Details") {
+                    Picker("Family", selection: $family) {
+                        ForEach(familyOptions) { familyOpt in
+                            Text(familyOpt.nameView)
+                        }
                     }
-                }
-                .pickerStyle(.menu)
-                
-                HStack {
-                    Text("Front Of Card")
-                    Spacer()
-                    Button {
-                        takeFrontImage.toggle()
-                    } label: {
-                        Image(systemName: "camera")
-                    }
-                    Spacer()
-                    if let frontImage {
-                        Image(uiImage: frontImage)
-                            .resizable()
-                            .scaledToFit()
+                    .pickerStyle(.menu)
+                    .onAppear {
+                        if let firstFamily = familyOptions.first {
+                            family = firstFamily
+                        }
                     }
                     
+                    TextField("Description", text: $description, axis: .vertical)
+                    DatePicker("Date Received", selection: $dateReceived, displayedComponents: .date)
                 }
-                .sheet(isPresented: $takeFrontImage) {
-                    Camera(selectedImage: $frontImage)
+
+                Section("Pictures"){
+                    HStack {
+                        Text("Front Of Card")
+                        Spacer()
+                        
+                        if let frontImage {
+                            Image(uiImage: frontImage)
+                                .resizable()
+                                .scaledToFit()
+                        } else {
+                            Button {
+                                takeFrontImage.toggle()
+                            } label: {
+                                Image(systemName: "camera")
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $takeFrontImage) {
+                        Camera(selectedImage: $frontImage)
+                    }
+                    
+                    HStack {
+                        Text("Back Of Card")
+                        Spacer()
+                        
+                        if let backImage {
+                            Image(uiImage: backImage)
+                                .resizable()
+                                .scaledToFit()
+                        } else {
+                            Button {
+                                takeBackImage.toggle()
+                            } label: {
+                                Image(systemName: "camera")
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $takeBackImage) {
+                        Camera(selectedImage: $backImage)
+                    }
                 }
                 
                 Button {
@@ -67,17 +101,6 @@ struct CardFormView: View {
                         Spacer()
                     }
                 }
-                
-                
-//                Button {
-//                    saveFamily()
-//                } label: {
-//                    HStack {
-//                        Spacer()
-//                        Text("Save")
-//                        Spacer()
-//                    }
-//                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -103,6 +126,7 @@ struct CardFormView: View {
         card.year = year
         card.category = category
         card.frontId = frontCardId
+        card.dateReceived = dateReceived
         try? moc.save()
         
         if let frontImage {
