@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Card" representedClassName="Card" syncable="YES" codeGenerationType="class">
+    <entity name="Card" representedClassName="Card" syncable="YES">
         <attribute name="backId" optional="YES" attributeType="String"/>
+        <attribute name="cardBackImage" optional="YES" attributeType="Transformable" valueTransformerName="UIImageTransformer" customClassName="UIImage"/>
         <attribute name="cardDescription" optional="YES" attributeType="String"/>
+        <attribute name="cardFrontImage" optional="YES" attributeType="Transformable" valueTransformerName="UIImageTransformer" customClassName="UIImage"/>
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="dateReceived" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="frontId" optional="YES" attributeType="String"/>

@@ -26,6 +26,9 @@
 		631DA8A6296CB467001E5A98 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA8A5296CB467001E5A98 /* Camera.swift */; };
 		631DA8A9296CB7C3001E5A98 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA8A8296CB7C3001E5A98 /* FileManager+Extensions.swift */; };
 		631DA8AB296CBB1C001E5A98 /* Card+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631DA8AA296CBB1C001E5A98 /* Card+Extension.swift */; };
+		635D74DF299BF3F4002C4167 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D74DE299BF3F4002C4167 /* UIImageTransformer.swift */; };
+		635D74E2299C19C8002C4167 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D74E0299C19C8002C4167 /* Card+CoreDataClass.swift */; };
+		635D74E3299C19C8002C4167 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D74E1299C19C8002C4167 /* Card+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		631DA8A5296CB467001E5A98 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		631DA8A8296CB7C3001E5A98 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		631DA8AA296CBB1C001E5A98 /* Card+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+Extension.swift"; sourceTree = "<group>"; };
+		635D74DE299BF3F4002C4167 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		635D74E0299C19C8002C4167 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
+		635D74E1299C19C8002C4167 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +114,15 @@
 		631DA88E296C7C1A001E5A98 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				635D74E0299C19C8002C4167 /* Card+CoreDataClass.swift */,
+				635D74E1299C19C8002C4167 /* Card+CoreDataProperties.swift */,
 				631DA887296C77BA001E5A98 /* CardModel.xcdatamodeld */,
 				631DA899296C867D001E5A98 /* Family+Extension.swift */,
 				631DA895296C810B001E5A98 /* Category+Extension.swift */,
 				631DA88F296C7C38001E5A98 /* Year+Extension.swift */,
 				631DA891296C7DAF001E5A98 /* CardsContainer.swift */,
 				631DA8AA296CBB1C001E5A98 /* Card+Extension.swift */,
+				635D74DE299BF3F4002C4167 /* UIImageTransformer.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -233,16 +242,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				631DA890296C7C38001E5A98 /* Year+Extension.swift in Sources */,
+				635D74E3299C19C8002C4167 /* Card+CoreDataProperties.swift in Sources */,
 				631DA898296C854B001E5A98 /* FamilyAddressView.swift in Sources */,
 				631DA87B296C71E3001E5A98 /* ContentView.swift in Sources */,
 				631DA896296C810B001E5A98 /* Category+Extension.swift in Sources */,
 				631DA892296C7DAF001E5A98 /* CardsContainer.swift in Sources */,
 				631DA889296C77BA001E5A98 /* CardModel.xcdatamodeld in Sources */,
 				631DA894296C7FD8001E5A98 /* CardCategoryListView.swift in Sources */,
+				635D74E2299C19C8002C4167 /* Card+CoreDataClass.swift in Sources */,
 				631DA88D296C7AD1001E5A98 /* CardYearListView.swift in Sources */,
 				631DA8A0296C9A46001E5A98 /* CardFormView.swift in Sources */,
 				631DA89C296C86C6001E5A98 /* FamilyFormView.swift in Sources */,
 				631DA8AB296CBB1C001E5A98 /* Card+Extension.swift in Sources */,
+				635D74DF299BF3F4002C4167 /* UIImageTransformer.swift in Sources */,
 				631DA88B296C7A07001E5A98 /* AppTabView.swift in Sources */,
 				631DA8A6296CB467001E5A98 /* Camera.swift in Sources */,
 				631DA89A296C867D001E5A98 /* Family+Extension.swift in Sources */,

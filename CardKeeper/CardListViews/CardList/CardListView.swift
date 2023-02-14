@@ -64,6 +64,7 @@ struct CardListView: View {
                         .scaledToFit()
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .shadow(color: .black.opacity(0.6),radius: 2, x: 2, y: 2 )
+                        .padding()
                     NavigationLink {
                         Text(selectedCard.cardDescriptionView)
                     } label: {
@@ -71,7 +72,7 @@ struct CardListView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .padding()
-
+                    Spacer()
                 }
             } else {
                 Spacer()

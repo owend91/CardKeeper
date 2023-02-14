@@ -127,11 +127,19 @@ struct CardFormView: View {
         card.category = category
         card.frontId = frontCardId
         card.dateReceived = dateReceived
+        if let frontImage = frontImage, let compressedImage = frontImage.jpegData(compressionQuality: 0.2) {
+            card.cardFrontImage = UIImage(data: compressedImage)
+        }
+        if let backImage = backImage, let compressedImage = backImage.jpegData(compressionQuality: 0.2) {
+            card.cardBackImage = UIImage(data: compressedImage)
+        }
+//        card.cardFrontImage = frontImage?.jpegData(compressionQuality: 0.2) as! UIImage
+//        card.cardBackImage = backImage?.jpegData(compressionQuality: 0.2) as! UIImage
         try? moc.save()
         
-        if let frontImage {
-            FileManager().saveImage(with: frontCardId, image: frontImage)
-        }
+//        if let frontImage {
+//            FileManager().saveImage(with: frontCardId, image: frontImage)
+//        }
         dismiss()
     }
 }

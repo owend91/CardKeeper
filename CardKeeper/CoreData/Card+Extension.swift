@@ -33,21 +33,23 @@ extension Card {
     }
     
     var frontImage: UIImage {
-        if !frontIdView.isEmpty,
-            let image = FileManager().retrieveImage(with: frontIdView) {
-                return image
-        } else {
-            return UIImage(systemName: "photo")!
-        }
+//        if !frontIdView.isEmpty,
+//            let image = FileManager().retrieveImage(with: frontIdView) {
+//                return image
+//        } else {
+//            return UIImage(systemName: "photo")!
+//        }
+        cardFrontImage ?? UIImage(systemName: "photo")!
     }
     
     var backImage: UIImage {
-        if !backIdView.isEmpty,
-            let image = FileManager().retrieveImage(with: backIdView) {
-                return image
-        } else {
-            return UIImage(systemName: "photo")!
-        }
+//        if !backIdView.isEmpty,
+//            let image = FileManager().retrieveImage(with: backIdView) {
+//                return image
+//        } else {
+//            return UIImage(systemName: "photo")!
+//        }
+        cardBackImage ?? UIImage(systemName: "photo")!
     }
     
 }
