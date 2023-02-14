@@ -29,6 +29,7 @@
 		635D74DF299BF3F4002C4167 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D74DE299BF3F4002C4167 /* UIImageTransformer.swift */; };
 		635D74E2299C19C8002C4167 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D74E0299C19C8002C4167 /* Card+CoreDataClass.swift */; };
 		635D74E3299C19C8002C4167 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D74E1299C19C8002C4167 /* Card+CoreDataProperties.swift */; };
+		635D74E5299C3656002C4167 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635D74E4299C3656002C4167 /* CardDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		635D74DE299BF3F4002C4167 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
 		635D74E0299C19C8002C4167 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		635D74E1299C19C8002C4167 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		635D74E4299C3656002C4167 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		635D74E6299C37C3002C4167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 		631DA877296C71E3001E5A98 /* CardKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				635D74E6299C37C3002C4167 /* Info.plist */,
 				631DA8A7296CB7A6001E5A98 /* Extentions */,
 				631DA8A4296CB3DE001E5A98 /* UIViewRepresentables */,
 				631DA8A3296CA0D3001E5A98 /* FamilyAddressViews */,
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				631DA89D296C8FF0001E5A98 /* CardListView.swift */,
+				635D74E4299C3656002C4167 /* CardDetailView.swift */,
 				631DA89F296C9A46001E5A98 /* CardFormView.swift */,
 			);
 			path = CardList;
@@ -247,6 +252,7 @@
 				631DA87B296C71E3001E5A98 /* ContentView.swift in Sources */,
 				631DA896296C810B001E5A98 /* Category+Extension.swift in Sources */,
 				631DA892296C7DAF001E5A98 /* CardsContainer.swift in Sources */,
+				635D74E5299C3656002C4167 /* CardDetailView.swift in Sources */,
 				631DA889296C77BA001E5A98 /* CardModel.xcdatamodeld in Sources */,
 				631DA894296C7FD8001E5A98 /* CardCategoryListView.swift in Sources */,
 				635D74E2299C19C8002C4167 /* Card+CoreDataClass.swift in Sources */,
@@ -389,6 +395,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardKeeper/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to allow you to take pictures of your cards.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -398,8 +405,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -428,6 +436,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardKeeper/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to allow you to take pictures of your cards.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -437,8 +446,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

@@ -15,6 +15,7 @@ struct CardYearListView: View {
     
     @State private var addYear = false
     @State private var year = ""
+//    @State private var navigationPath: NavigationPath = NavigationPath()
     var body: some View {
         NavigationStack {
             List {
@@ -35,21 +36,28 @@ struct CardYearListView: View {
             }
             .alert("Add year", isPresented: $addYear) {
                 TextField("Year", text: $year)
+                    .keyboardType(.numberPad)
+    
                 Button {
                     if years.filter({ $0.yearView == year }).count == 0 && !year.isEmpty {
                         let newYear = Year(context: moc)
                         newYear.year = year
                         try? moc.save()
+                        year = ""
                     }
  
 //                    dismiss()
                 } label: {
                     Text("OK")
                 }
-                Button("Cancel", role: .cancel) {}
+                Button("Cancel", role: .cancel) {
+                    year = ""
+                }
             } message: {
                 Text("Please enter a new year")
             }
+           
+
         }
     }
 }

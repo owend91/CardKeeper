@@ -14,6 +14,7 @@ struct CardCategoryListView: View {
     
     @State private var addCategory = false
     @State private var category = ""
+
     
     var body: some View {
         List {

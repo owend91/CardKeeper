@@ -10,7 +10,6 @@ import SwiftUI
 struct CardListView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) var moc
-    
 
     @FetchRequest var cards: FetchedResults<Card>
     
@@ -66,7 +65,9 @@ struct CardListView: View {
                         .shadow(color: .black.opacity(0.6),radius: 2, x: 2, y: 2 )
                         .padding()
                     NavigationLink {
-                        Text(selectedCard.cardDescriptionView)
+                        VStack {
+                            CardDetailView(selectedCard: $selectedCard)
+                        }
                     } label: {
                         Label("More Details", systemImage: "info")
                     }
